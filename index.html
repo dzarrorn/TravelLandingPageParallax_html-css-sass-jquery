@@ -9,9 +9,51 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Parallax</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">booking</a></li>
+          <li><a href="#">maps</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <h1>logo</h1>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="content">
+        <h1>travel</h1>
+        <h3>book your journey now adventure awaits.</h3>
+        <h5>upto 50% off on first booking</h5>
+        <a href="#"><button>book now</button></a>
+        <div class="icons">
+          <a href="#" class="fab fa-facebook-square"></a>
+          <a href="#" class="fab fa-twitter-square"></a>
+          <a href="#" class="fab fa-instagram-square"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="images">
+        <img src="images/image2.png" alt="" />
+        <img src="images/image1.png" class="plane" alt="" />
+      </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("img").mousemove(function (e) {
+          var x = e.pageX / 6;
+          var y = e.pageY / 6;
+
+          $(".plane").css({ top: -y, right: x });
+        });
+      });
+    </script>
   </body>
 </html>

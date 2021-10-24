@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Kaushan+Script&family=Nunito:wght@200;300;400;600;700&display=swap");
+
+$red: #840d08;
+* {
+  font-family: "Exo 2", sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #1a1d1f;
+  overflow: hidden;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  nav {
+    width: 50rem;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      list-style-type: none;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 2rem;
+          padding: 1rem;
+          &:hover {
+            background: $red;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    h1 {
+      color: white;
+      font-size: 4rem;
+    }
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .content {
+    margin-top: -10rem;
+    width: 35%;
+    h1 {
+      font-size: 7rem;
+      color: white;
+    }
+    h3 {
+      font-size: 3rem;
+      color: white;
+      margin: 1rem 0;
+    }
+    h5 {
+      color: gold;
+      font-size: 1.5rem;
+    }
+    button {
+      outline: none;
+      border: none;
+      background: $red;
+      height: 4rem;
+      width: 16rem;
+      color: white;
+      border-radius: 5rem;
+      margin: 2rem 0;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .icons {
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 3rem;
+        margin: 1rem;
+        cursor: pointer;
+        &:hover {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+  .images {
+    margin-top: -10rem;
+    width: 40%;
+    position: relative;
+    img {
+      width: 40vw;
+    }
+    .plane {
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      animation: float 2s linear infinite;
+    }
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5rem);
+  }
+}
